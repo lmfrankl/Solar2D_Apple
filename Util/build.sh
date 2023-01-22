@@ -50,11 +50,11 @@ BUILDER="Util/S2D/Corona-${S2D_BUILD_NUMBER}/Native/Corona/mac/bin/CoronaBuilder
 
 hdiutil detach Util/S2D
 
-# echo "Uploading the app"
-# if [ "${APPLE_TEAM_ID}" ]
-# then
-#     xcrun iTMSTransporter -m upload -assetFile Util/*.ipa  -u "${APPLE_USERNAME}" -p "${APPLE_PASSWORD}" -asc_provider "${APPLE_TEAM_ID}"
-# else
-#     xcrun iTMSTransporter -m upload -assetFile Util/*.ipa  -u "${APPLE_USERNAME}" -p "${APPLE_PASSWORD}"
-# fi
+echo "Uploading the app"
+if [ "${APPLE_TEAM_ID}" ]
+then
+    xcrun iTMSTransporter -m upload -assetFile Util/*.ipa  -u "${APPLE_USERNAME}" -p "${APPLE_PASSWORD}" -asc_provider "${APPLE_TEAM_ID}"
+else
+    xcrun iTMSTransporter -m upload -assetFile Util/*.ipa  -u "${APPLE_USERNAME}" -p "${APPLE_PASSWORD}"
+fi
 )
