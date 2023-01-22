@@ -57,4 +57,4 @@ hdiutil detach Util/S2D
 # else
 #     xcrun iTMSTransporter -m upload -assetFile Util/*.ipa  -u "${APPLE_USERNAME}" -p "${APPLE_PASSWORD}"
 # fi
-# )
+)
